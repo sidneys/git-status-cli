@@ -1,0 +1,53 @@
+{
+  "name": "git-status-cli",
+  "appId": "de.sidneys.git-status-cli",
+  "version": "0.2.0",
+  "description": "git-status-cli",
+  "license": "MIT",
+  "homepage": "https://github.com/sidneys/git-status-cli",
+  "author": {
+    "name": "sidneys",
+    "email": "sidneys.github.io@outlook.com",
+    "url": "https://sidneys.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sidneys/git-status-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sidneys/git-status-cli/issues"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "os": [
+    "darwin",
+    "win32",
+    "linux"
+  ],
+  "keywords": [
+    "git"
+  ],
+  "preferGlobal": true,
+  "dependencies": {
+    "@sidneys/logger": "^1.3.0",
+    "app-root-path": "^2.0.1",
+    "chalk": "^2.4.1",
+    "git-status-utils": "^0.3.3",
+    "json-stringify-pretty-compact": "^1.2.0",
+    "minimist": "^1.2.0",
+    "parse-git-status": "^0.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "jsdoc": "^3.5.5"
+  },
+  "main": "./index.js",
+  "bin": {
+    "git-status": "./index.js"
+  },
+  "scripts": {
+    "docs": "./node_modules/.bin/jsdoc --verbose --configure .jsdoc.json",
+    "start": "node ./index.js"
+  }
+}
