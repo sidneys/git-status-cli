@@ -1,7 +1,7 @@
 {
   "name": "git-status-cli",
   "appId": "de.sidneys.git-status-cli",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Get the file status (`git status`) of the current Git repository from the commandline. Format the output as JSON or plaintext.",
   "license": "MIT",
   "homepage": "https://github.com/sidneys/git-status-cli",
