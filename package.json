@@ -1,7 +1,7 @@
 {
   "name": "git-status-cli",
   "appId": "de.sidneys.git-status-cli",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Get the file status (`git status`) of the current Git repository from the commandline. Format the output as JSON or plaintext.",
   "license": "MIT",
   "homepage": "https://github.com/sidneys/git-status-cli",
@@ -18,7 +18,8 @@
     "url": "https://github.com/sidneys/git-status-cli/issues"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=11.0.0",
+    "npm": ">= 6.0.0"
   },
   "os": [
     "darwin",
@@ -45,28 +46,26 @@
   ],
   "preferGlobal": true,
   "dependencies": {
-    "@sidneys/logger": "^1.3.0",
-    "app-root-path": "^2.0.1",
-    "chalk": "^2.4.1",
-    "git-status-utils": "^0.3.3",
+    "@sidneys/logger": "^1.48.0",
+    "app-root-path": "^2.1.0",
+    "chalk": "^2.4.2",
     "indent-string": "^3.2.0",
-    "json-stringify-pretty-compact": "^1.2.0",
+    "json-stringify-pretty-compact": "^2.0.0",
     "minimist": "^1.2.0",
-    "pad": "^2.1.0",
+    "pad": "^2.2.2",
     "parse-git-status": "^0.1.0",
-    "window-size": "^1.1.0",
+    "which": "^1.3.1",
+    "window-size": "^1.1.1",
     "word-wrap": "^1.2.3"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "jsdoc": "^3.5.5"
+    "eslint": "^5.14.1"
   },
   "main": "./lib/main.js",
   "bin": {
     "git-status": "./lib/main.js"
   },
   "scripts": {
-    "docs": "./node_modules/.bin/jsdoc --verbose --configure .jsdoc.json",
     "start": "node ./lib/main.js"
   }
 }
