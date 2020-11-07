@@ -3,8 +3,7 @@
 ------
 
 <p align="center">
-  <b>Get the file status (`git status`) of the current Git repository from the commandline.<br><br>
-  <b>Format output as JSON or plain text.<br>
+  <b>Get the output of 'git status' from the command line, formatted as JSON or plain text.<br><br>
   Available for macOS, Windows and Linux.
 </p>
 
@@ -33,28 +32,40 @@ $ npm install --global git-status-cli
 ## <a name="usage"/></a> Usage
 
 ```bash
-$ git-status [--format <output-format>]
+$ git-status [--format <output-format>] [--cwd <path>] [--git <path>]
 ```
 
 - Parameters
-   - **<output-format>** (String) - json, text (*Default: json*)
+   - -f, --format **output-format** - Output format (Options: *json*, *text*)
+   - -c, --cwd **path** - Path to Git repository (Example: */home/user/myrepository*)
+   - -g, --git **path** - Path to Git executable (Example: */usr/bin/git*)
 
 
 ## <a name="examples"/></a> Examples
 
+### Standard usage
+
 ```bash
 $ git-status
 >> {
->>     "modified": [ "file1", "file2" ],
->>     "added": [ "file3", "file4" ]
+>>     "modified": [ "README.md", "lib/index.js" ],
+>>     "added": [ "LICENSE" ]
 >> }  
 ```
 
-### Status as Plaintext
+### Custom format
 
 ```bash
-$ git-status-cli --format=text
->> modified:		file1, file2
+$ git-status-cli --format text
+>> modified:		README.md, file2
+>> added:		file3, file4
+```
+
+### Custom repository path
+
+```bash
+$ git-status-cli --cwd "/Users/joeqpublic/Documents/myrepository"
+>> modified:		README.md, file2
 >> added:		file3, file4
 ```
 
@@ -75,9 +86,9 @@ $ git-status-cli --version
 
 Tested on:
 
-- macOS High Sierra 10.13.4
+- macOS Mojave (10.14.6)
 - Windows 10 Spring Creators Update
-- Ubuntu 18.04
+- Ubuntu (18.04)
 
 
 ## <a name="contribute"/></a> Contribute ![Contribute](https://img.shields.io/badge/contributions-wanted-red.svg?style=flat-square)

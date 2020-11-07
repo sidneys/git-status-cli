@@ -1,5 +1,4 @@
 {
-  "root": true,
   "env": {
     "browser": true,
     "es6": true,
@@ -8,11 +7,12 @@
   "parserOptions": {
     "ecmaVersion": 6,
     "ecmaFeatures": {
-      "globalReturn": false,
+      "globalReturn": true,
       "impliedStrict": true,
       "jsx": true
     }
   },
+  "root": true,
   "rules": {
     "array-bracket-spacing": [
       "error",
